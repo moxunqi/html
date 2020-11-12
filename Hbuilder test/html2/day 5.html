@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content="10;url="
+		<title>Day 5</title>
+	</head>
+	<body>
+		<h1><em>The 5th day of my prectice</em></h1>
+		<h2><strong>Program 1</strong></h2>
+        <h3><strong>超链接</strong></h3>
+        <div>
+        	<h4>About 超链接</h4>
+        	<p id="link">超链接有内部链接和外部链接两种链接，内部链接用相对路径，a标签内可以直接写文字（不用p/h标签）</p>
+        	<a href="html1/day 4.html" target="_blank"><img src="img/nzza.jpg" atl="那咋整啊" title="那咋整啊"/></a>
+        	<p>本图片用了内部链接</p>
+        	<br/>
+        	<a href="http://127.0.0.1:8020/html1/day%204.html?__hbt=1604495995557" target="_blank">
+        		<img src="img/nzza.jpg" atl="那咋整啊" title="那咋整啊"/>
+        	</a>
+        	<p>本图片用了外部链接，点击后可以看出加载的两网页地址不同</p>
+        	<!--
+            	作者：3053615901@qq.com
+            	时间：2020-11-05
+            	描述：内部链接只能链接同一个web文件夹的文件，而外部链接能链接不同web文件夹的文件。
+            -->
+            <p>target属性控制打开网页的位置，"_blank"则在新窗口打开"_self"（默认）则在本窗口大开<br/>_self如下：</p>
+            <a href="https://www.baidu.com" target="_self"><img src="img/laji.jpg" atl="垃圾" title="自觉分类"/></a>
+            <p>锚点链接<br/>它会超链接到当前网页的某个位置，在使用之前要对那个位置的标签执行id命名，链接时href=后引号里的地址用<strong><em><br/>#（id名）</em></strong></p>
+            <p>如：</p>
+            <a href="#link">内部链接与外部链接</a>
+        </div>
+        <p>PROGRAM END</p>
+	</body>
+</html>

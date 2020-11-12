@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content="50;url="/>
+		<title>Day 5</title>
+	</head>
+	<body>
+		<h1>The 5th day of my prectice</h1>
+		<h2>Program 2</h2>
+		<h3 id="dinbu">表单</h3>
+		<p>表单关系到动态网页的制作,表单是指文本框，按钮，单选框，复选框，下拉列表的统称</p>
+		<div>
+			<h4>About :form</h4>
+			<p>form标签确定了表单的范围（它包括了input,select,textarea,option）</p>
+			<a href="#input">input</a><br/><a href="#textarea">textarea</a><br/><a href="#select">select</a>
+			<p>对于不与服务器进行数据交换的表单元素可以不放在form标签内</p>
+			<form action="information/" method="post" target="_blank">
+				这是一个下拉列表:
+				<select>
+					这是一个下拉列表
+					<option>html</option>
+					<option>css</option>
+					<option>javascript</option>
+				</select><br />
+				<input type="text" value="这是一个文本框" /><br />
+				<textarea>这是文字域（多行文本框）</textarea><br />
+			</form>
+			<p>form有"name,method,action,target,enctype"这些常用标签<br/>
+				name用于给表单命名（不用id=）<br/>
+				method指数据提交方法，有get和post两种，其中post安全性更好<br/>
+				action指定提交的地址<br/>
+				target与超链接中的target一样--指定窗口打开方式，一般用"_blank"<br/>
+				enctype指定提交数据的编码形式，一般不设置<br />
+				其内可以直接写文字
+			</p>
+			<!--
+            	作者：3053615901@qq.com
+            	时间：2020-11-05
+            	描述：table,div,h,p,hr,form均为块元素，而form内的select,testarea,button等元素均不是块元素.
+            -->
+            <p id="input"><strong>input属性</strong><br/>input标签是自闭合标签,其type有"text（单行文本框）,password（密码文本框）,
+            radio(单选框),checkbox（多选框）,button/submit/reset（按钮）,file（选择文件上传）"</p>
+            <p><strong>单行文本框</strong><br/>单行文本框有value（默认显示内容）,size（文本框长度）,
+            	maxlength（输入最多的字符数）三个属性。</p>
+                                            <!--
+                                            	作者：3053615901@qq.com
+                                            	时间：2020-11-11
+                                            	描述：一般用css来控制文本框的长度.
+                                            -->
+            <p><strong>密码文本框</strong><br/>密码文本框能隐藏输入的内容，它是一种特殊的单行文本框,因此它的属性与text一样。<br/>如：</p>
+            <form>
+            	账号：<input type="text" value=""/><br/> 
+            	密码：<input type="password" value=""/> 
+            </form>
+            <p><strong>单选框</strong><br/>单选框包括了name（组名,用来绑定同组的单选框）,
+            value（选项取值,给JavaScript用的，应与选项内容保持一致）属性，
+                        可用checked="checked"(在HTML5中可简写为checked)来默认选中其中一个选项。<br/>如:</p>
+            <form>
+            Is it right?<br />
+            <input type="radio" name="right?" value="Right" checked="checked"/>Right
+            <input type="radio" name="right?" value="Wrong" />Wrong
+            </form>
+            <p><strong>复选框</strong><br/>复选框属性与单选框类似，但它可以用checked 属性同时选中多个选项。<br/>如：</p>
+            <form>
+            	What is you favorite fruit?<br />
+            	<input type="checkbox" name="fruit" value="apple" checked="checked"  />Apple<br />
+            	<input type="checkbox" name="fruit" value="bananas" checked="checked" />Bananas <br />
+            	<input type="checkbox" name="fruit" value="watermelon"/>Watermelon<br />
+            	<input type="checkbox" name="fruit" value="plum" />Plum
+            </form>
+            <p><strong>按钮</strong><br/>HTML中有三种按钮：普通按钮button（一般配合JavaScript使用），提交按钮submit（提交信息给服务器）
+            	，重置按钮reset（清除在表单中输入的内容）</p>
+            	<p>普通按钮</p>
+            <form>
+            	<input type="button" value="onclick" onclick="alert('嘿 嘿 嘿！')"/><br />            	
+            </form>
+            <p>提交按钮,重置按钮</p>
+            <form method="post" action="information/" target="_blank">
+            	名字：<input type="text" value="" maxlength="20" /><br />
+            	性别：<input type="radio" value="nan" checked="checked" />男
+            	<input type="radio" value="nv" />女<br />
+            	介绍：<br />
+            	<textarea value=""></textarea><br />
+            	邮箱：<input type="text" value="@qq.com" /><br />
+            	上传你的照片<br />
+            	<input type="file" /><br />
+                                           <!--
+                                           	作者：3053615901@qq.com
+                                           	时间：2020-11-12
+                                           	描述：file中自带按钮名称“选择文件”和标明是否选择文件，及选择的文件名，因此不需要value属性来给
+                                           	file命名。
+                                           -->
+            	<input type="submit" value="submit" /><input type="reset" value="reset" /><br />
+            </form>
+            <p><strong>button属性</strong><br/>button属性在实际开发中几乎无用。</p>
+            <p id="textarea"><strong>多行文本框</strong><br/>textarea标签包含了cols（所占列数）,rows（所占行数）,
+            	value（不是自带文字，自带文字要在标签对内写，这个属性这是取值，用于JavaScript）三种属性</p>
+            <textarea value="words" rows="15" cols="20">Words</textarea><br />
+            <p id="select"><strong>下拉列表</strong><br/>由option,select标签来表示，select标签有size,multiple两个属性，
+            size控制点开下拉列表后一次显示的选项个数，multiple则使下拉列表能选择多项，用ctrl+鼠标左键来选择。
+            特别注意的是：在HTML5中multiple属性没有属性值即写成“multipe”即可<br/>如：</p>
+            <form>
+            	<select size="3" multiple="multiple">
+            		<option>HTML</option>
+            		<option>CSS</option>
+            		<option>JavaScript</option>
+            		<option>jQuery</option>
+            		<option>Vue.js</option>
+            		<option>HTML5</option>
+            		<option>CSS3</option>
+            	</select>
+            </form>
+            <p>option标签包括了selected（选中）,value属性(只有file,select无value属性，单行文本框，密码文本框，三种按钮的
+            value都显示在浏览器上，而checkbox,radio,textarea,option,的value只有与JavaScript交流的功能。)</p>
+            <form>
+            	<select size="3" multiple="multiple">
+            		<option value="HTML" selected="selected">HTML</option>
+            		<option value="CSS" selected="selected">CSS</option>
+            		<option value="JavaScript" selected="selected">JavaScript</option>
+            		<option value="jQuery">jQuery</option>
+            		<option value="Vue.js">Vue.js</option>
+            		<option value="HTML5">HTML5</option>
+            		<option value="CSS3">CSS3</option>
+            	</select>
+            </form>
+            <p>同样的，在HTML5中，selected="selected"可以简写为selected</p>
+            <a href="#dinbu">点击这里回到顶部</a>
+		</div>
+		<p><strong>PROGRAM END</strong></p>
+	</body>
+</html>

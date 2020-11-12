@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="10;url="/>
+    <title>Day 3</title>
+</head>
+<body>
+<h1><em>The 3rd day of my prectice</em></h1>
+<h2>Program 2</h2>
+<p><stong>Table</strong></p>
+<div>
+<p>About : table</p>
+<table>
+<caption>My learning</caption>
+<!--caption 是用于表格的标题-->
+<!--th 是表头"单元格"，用于表头而不是用于标题，浏览器会将th中的内容"居中并加粗"而td则不会-->
+<tr>
+<th>Day</th>
+<th>Content</th>
+</tr>
+<tr><!--tr 是指表格的一行（table row）-->
+<td>10.27</td><!--td 是指表格"单元格"（table data cell）-->
+<td>Buy the book</td>
+</tr>
+<tr>
+<td>10.29</td>
+<td>Learn HEAD</td>
+</tr>
+</table>
+<p>注意:表格默认是没有边框的<br/>但你可以通过border="n px"来添加边框（或者通过CSS来添加边框）</p>
+<p><strong>语义化</strong></p>
+<p>html 定义了thead,tbody,tfoor三个标签来使表格语义更加良好<br/>如:</p>
+<table border="1 px">
+<caption>thead,tbody,tfoor</caption>
+<thead>
+<tr>
+<th>Number</th><!--"thead,tbody,tfoor"三个标签不是用于取代"tr"的，tr应包含在这些标签内-->
+<th>Kind</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Thead</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>2</td>
+<td>tbody</td>
+</tr>
+</tbody>
+<tfoor>
+<tr>
+<td>3</td>
+<td>Tfoor</td>
+</tr>
+</tfloor>
+</table>
+<p><strong>单元格合并</strong></p>
+<p>html 中用"colspan"和"rowspan"来合并行和列上的单元格,colspan合并相邻几列的单元格（左右）而rowspan合并相邻几行的单元格（上下）<br/>如:</p>
+<table border="1 px">
+<caption>喜欢的水果</caption>
+<tr>
+<th>姓名:</th><td>小明</td>
+</tr>
+<tr>
+<th rowspan="2">喜欢的水果:</th><td>苹果</td>
+</tr>
+<tr>
+<td>香蕉</td>
+</tr>
+</table>
+<table border="1 px">
+<caption>前端开发技术</caption>
+<tr>
+<td colspan="2">前端开发技术:</td>
+</tr>
+<tr>
+<td>HTML:</td><td>CSS</td>
+</tr>
+<tr>
+<td>JavaScript</td><td>jQuery</td>
+</tr>
+</table>
+</div>
+<p>PROGRAM END</p>
+</body>
+</html>
